@@ -1,0 +1,242 @@
+{
+	
+	"Try-Except Block": {
+		"scope": "python",
+		"prefix": "try",
+		"body": [
+			"try:",
+			"\t${1:try_block}",
+			"except ${2:Exception} as ${3:err}:",
+			"\t${4:except_block}"
+		],
+		"description": "Try-except block"
+	},
+
+	"Nested Enumerate": {
+		"scope": "python",
+		"prefix": "ne",
+		"body": [
+			"for ${1:outer_index}, ${2:outer_item} in enumerate(${3:outer_iterable}):",
+			"\tfor ${4:inner_index}, ${5:inner_item} in enumerate(${6:inner_iterable}):",
+			"\t\t${7:# Your code here}"
+		],
+		"description": "Nested enumerate loop"
+	},
+	"Map with Lambda": {
+		"scope": "python",
+		"prefix": "map",
+		"body": [
+			"result = list(map(lambda ${1:param}: ${2:expression}, ${3:iterable}))"
+		],
+		"description": "Map function with lambda"
+	},
+	
+
+	"F-string Print": {
+		"scope": "python",
+		"prefix": "pf",
+		"body": [
+			"print(f\"${1:message}\")"
+		],
+		"description": "F-string print statement"
+	},
+	"F-string Print with Variable Assignment": {
+		"scope": "python",
+		"prefix": "db",
+		"body": [
+			"print(f\"{${1:message} = }}\")"
+		],
+		"description": "F-string print statement with variable assignment"
+	},
+	"Class Definition": {
+		"scope": "python",
+		"prefix": "class",
+		"body": [
+			"class ${1:ClassName}:",
+			"\tdef __init__(self, ${2:arguments}):",
+			"\t\t${3:pass}",
+			"",
+			"\tdef ${4:method_name}(self, ${5:method_arguments}):",
+			"\t\t${6:pass}"
+		],
+		"description": "Class definition"
+	},
+	"Function Definition": {
+		"scope": "python",
+		"prefix": "fn",
+		"body": [
+			"def ${1:function_name}(${2:arguments}):",
+			"\t${3:pass}"
+		],
+		"description": "Function definition"
+	},
+	
+	
+	
+	
+
+
+
+
+	#django
+	"Django View": {
+		"scope": "python",
+		"prefix": "dv",
+		"body": [
+			"from django.shortcuts import render, get_object_or_404, redirect",
+			"from django.http import HttpResponse, JsonResponse",
+			"from django.contrib import messages",
+			"from .models import ${5:YourModel}",
+			"",
+			"def ${1:view_name}(request${6,: Optional arguments}):",
+			"\t# Your view logic here",
+			"\t${7:template_name} = '${8:template_name}.html'",
+			"\t${9:context} = {",
+			"\t\t'${10:context_variable}': ${11:value},",
+			"\t}",
+			"\treturn render(request, ${7:template_name}, ${9:context})",
+			"",
+			"# Example of using get_object_or_404:",
+			"# obj = get_object_or_404(${5:YourModel}, ${12:pk}=${13:pk_value})",
+			"",
+			"# Example of using redirect:",
+			"# return redirect('${14:redirect_url}')",
+			"",
+			"# Example of using messages framework:",
+			"# messages.success(request, '${15:Success message}')",
+			"",
+			"# Example of returning JsonResponse:",
+			"# return JsonResponse({'${16:key}': '${17:value}'})"
+		],
+		"description": "Django View"
+	},
+	"Django View with POST and Form": {
+		"scope": "python",
+		"prefix": "dp",
+		"body": [
+			"def ${1:view_name}(request):",
+			"\tif request.method == 'POST':",
+			"\t\tform = ${3:YourForm}(request.POST)",
+			"\t\tif form.is_valid():",
+			"\t\t\t# Process the form data",
+			"\t\t\t${4:process_form_data}",
+			"\t\t\tmessages.success(request, '${5:Success message}')",
+			"\t\t\treturn redirect('${6:success_redirect_url}')",
+			"\t\telse:",
+			"\t\t\tmessages.error(request, '${7:Error message}')",
+			"\telse:",
+			"\t\tform = ${3:YourForm}()",
+			"",
+			"\treturn render(request, '${2:template_name}.html', {'form': form})"
+		],
+		"description": "Django View with POST and Form"
+	},
+	
+	"Django Form": {
+		"scope": "python",
+		"prefix": "df",
+		"body": [
+			"from django import forms",
+			"",
+			"class ${1:YourForm}(forms.Form):",
+			"\t${2:field_name} = forms.${3:CharField}(label='${4:Field Label}', max_length=${5:100})",
+			"\t# Add more fields as needed",
+			"",
+			"\tdef clean_${2:field_name}(self):",
+			"\t\t${6:# Optional custom validation for the field}",
+			"\t\t${7:return self.cleaned_data['${2:field_name}']}",
+			"",
+			"\t# Add more custom cleaning methods as needed",
+		],
+		"description": "Django Form"
+	},
+
+	"Django Model": {
+		"scope": "python",
+		"prefix": "dm",
+		"body": [
+			"from django.db import models",
+			"",
+			"class ${1:YourModel}(models.Model):",
+			"\t${2:field_name} = models.${3:CharField}(max_length=${4:100}, verbose_name='${5:Field Label}')",
+			"\t# Add more fields as needed",
+			"",
+			"\tdef __str__(self):",
+			"\t\treturn self.${2:field_name}",
+		],
+		"description": "Django Model"
+	},
+	"Django URL Pattern": {
+		"scope": "python",
+		"prefix": "du",
+		"body": [
+			"from django.urls import path",
+			"from . import views",
+			"",
+			"urlpatterns = [",
+			"\tpath('${1:url_path}/', views.${2:view_name}, name='${3:url_name}'),",
+			"]"
+		],
+		"description": "Django URL Pattern"
+	},
+	"Django View with GET and POST": {
+		"scope": "python",
+		"prefix": "dvp",
+		"body": [
+			"from django.shortcuts import render, redirect",
+			"from django.contrib import messages",
+			"from .forms import ${3:YourForm}",
+			"from .models import ${5:YourModel}",
+			"",
+			"def ${1:view_name}(request):",
+			"\tif request.method == 'POST':",
+			"\t\tform = ${3:YourForm}(request.POST)",
+			"\t\tif form.is_valid():",
+			"\t\t\t# Process the form data for POST request",
+			"\t\t\t${4:process_post_data}",
+			"\t\t\tmessages.success(request, '${6:Success message}')",
+			"\t\t\treturn redirect('${7:success_redirect_url}')",
+			"\t\telse:",
+			"\t\t\tmessages.error(request, '${8:Error message}')",
+			"\telse:",
+			"\t\tform = ${3:YourForm}()",
+			"",
+			"\t# Process the data for GET request if needed",
+			"\t${9:process_get_data}",
+			"",
+			"\treturn render(request, '${2:template_name}.html', {'form': form})"
+		],
+		"description": "Django View with GET and POST"
+	},
+	"flask route": {
+		"scope": "python",
+		"prefix": "frp",
+		"body": [
+				"@app.route('/<string:page>', methods=['GET'])",		
+				"def return_page(page):",
+				"return render_template(f"{page}.html")"
+			
+		],
+		"description": "takes in str:page and returns page.html form templates"
+	},
+	"flask api route": {
+		"scope": "python",
+		"prefix": "far",
+		"body": [
+				"@app.route('api/<string:${1:data}>', methods=['${2:GET}'])",		
+				"def ${3:returns}(${4:Id}):",
+				"return {}"
+			
+		],
+		"description": "takes in str:page and returns page.html form templates"
+	},
+
+
+	
+	
+	
+	
+	
+	
+	
+}

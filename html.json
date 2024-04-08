@@ -1,0 +1,144 @@
+
+	{
+		"htmx cdn": {
+			"prefix": "hcdn",
+			"body": [
+			  "    <script src=\"https://unpkg.com/htmx.org@1.7.0/dist/htmx.min.js\"></script>",
+			  ""
+			],
+			"description": "htmx cdn"
+		  }
+		"react cdn": {
+			"prefix": "rcdn",
+			"body": [
+			  "  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js\"></script>",
+			  "  <script src=\"https://unpkg.com/react@17/umd/react.development.js\"></script>",
+			  "  <script src=\"https://unpkg.com/react-dom@17/umd/react-dom.development.js\"></script>"
+			],
+			"description": "react cdn"
+		  }
+		"Jinja If Statement": {
+		  "scope": "html",
+		  "prefix": "if",
+		  "body": [
+			"{% if ${1:condition} %}",
+			"\t${2:content}",
+			"{% endif %}"
+		  ],
+		  "description": "Jinja if statement"
+		},
+	  
+		"Jinja For Loop": {
+		  "scope": "html",
+		  "prefix": "for",
+		  "body": [
+			"{% for ${1:item} in ${2:items} %}",
+			"\t${3:{{ item }}",
+			"{% endfor %}"
+		  ],
+		  "description": "Jinja for loop"
+		},
+	  
+		"Jinja Macro": {
+		  "scope": "html",
+		  "prefix": "macro",
+		  "body": [
+			"{% macro ${1:macro_name}(${2:params}) %}",
+			"\t${3:content}",
+			"{% endmacro %}"
+		  ],
+		  "description": "Jinja macro"
+		},
+	  
+		"Jinja Block": {
+		  "scope": "html",
+		  "prefix": "block",
+		  "body": [
+			"{% block ${1:block_name} %}",
+			"\t${2:content}",
+			"{% endblock %}"
+		  ],
+		  "description": "Jinja block"
+		},
+	  
+		"Jinja Include": {
+		  "scope": "html",
+		  "prefix": "include",
+		  "body": [
+			"{% include '${1:template_name}' %}"
+		  ],
+		  "description": "Jinja include"
+		},
+	  
+		"Jinja Extends": {
+		  "scope": "html",
+		  "prefix": "ex",
+		  "body": [
+			"{% extends '${1:base}.html' %}"
+		  ],
+		  "description": "Jinja extends"
+		},
+	  
+		"Jinja Filter": {
+		  "scope": "html",
+		  "prefix": "filter",
+		  "body": [
+			"{{ ${1:value} | ${2:filter_name} }}"
+		  ],
+		  "description": "Jinja filter"
+		},
+
+
+
+		"react": {
+			"prefix": "react",
+			"body": [
+			  "<!DOCTYPE html>",
+			  "<html lang=\"en\">",
+			  "<head>",
+			  "    <meta charset=\"UTF-8\">",
+			  "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			  "    <title>todo</title>",
+			  "      <script src=\"https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js\"></script>",
+			  "      <script src=\"https://unpkg.com/react@17/umd/react.development.js\"></script>",
+			  "      <script src=\"https://unpkg.com/react-dom@17/umd/react-dom.development.js\"></script>",
+			  "</head>",
+			  "<body>",
+			  "",
+			  "",
+			  "    <div id=\"root\"></div>",
+			  "    ",
+			  "",
+			  "",
+			  "    <script type=\"text/babel\">",
+			  "",
+			  "",
+			  "        function App(){",
+			  "            return(",
+			  "                <div>",
+			  "                    ",
+			  "                    ",
+			  "                </div>",
+			  "",
+			  "",
+			  "            )",
+			  "        }",
+			  "",
+			  "",
+			  "",
+			  "     ReactDOM.render(<App />, document.getElementById('root'));",
+			  "    </script>",
+			  "</body>",
+			  "</html>"
+			],
+			"description": "react"
+		  }
+
+
+
+
+
+
+		
+	  }
+	  

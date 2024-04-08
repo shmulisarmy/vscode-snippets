@@ -1,0 +1,49 @@
+{
+	"write to file": {
+		"prefix": "wtf",
+		"body": [
+		  "cat << EOF > ${1:filename}",
+		  "${2:content}",
+		  "EOF"
+		],
+		"description": "write to file"
+	  },
+	  "alais": {
+		"prefix": "a",
+		"body": [
+		  "alias ${1:keyword}=\"${2:command}\""
+		],
+		"description": "alias"
+	  },
+	  "cjal": {
+		"prefix": "cg",
+		"body": [
+			"consol.gog()"
+		],
+		"description": "dasgd"
+	},
+	"cjal": {
+		"prefix": "co",
+		"body": [
+			"cono"
+		],
+		"description": "dasgd"
+	},
+	"anonymous 7": {
+		"prefix": "cl",
+		"body": [
+			"function hello(){"
+			"return 1 + 1}"
+		],
+		"description": "a shortcut that turns cl into function hello(){/lreturn 1 + 1}"
+	},
+
+	"if statment": {
+		"prefix": "if statment",
+		"body": [
+			"if [ $1 -eq 1 ]; then\n\techo \"First condition is true\"\nelse\n\techo \"First condition is false\"\nfi\n"
+		],
+		"description": "if statment"
+	},
+	
+}

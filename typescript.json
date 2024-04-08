@@ -1,0 +1,53 @@
+{
+	"number": {
+		"prefix": "int",
+		"body": [
+		  "${1:x}: number = "
+		],
+		"description": "number"
+	  },
+
+	  "string": {
+		"prefix": "str",
+		"body": [
+		  "${1:h}: string = "
+		],
+		"description": "string"
+	  },
+
+	  "add": {
+		"prefix": "add",
+		"body": [
+		  "function add(x: number, y: number): number {",
+		  "    return x + y;",
+		  "}"
+		],
+		"description": "add"
+	  },
+
+	  "user": {
+		"prefix": "user",
+		"body": [
+		  "let user: { name: string, age: number, isActive: boolean } = {",
+		  "    name: \"John\",",
+		  "    age: 25,",
+		  "    isActive: true",
+		  "};"
+		],
+		"description": "user"
+	  },
+	  "sum": {
+		"prefix": "sum",
+		"body": [
+		  "function sum(...numbers: number[]): number {",
+		  "    let result = 0;",
+		  "    for  (const num of numbers) {",
+		  "        result += num;",
+		  "    }",
+		  "    return result",
+		  "}"
+		],
+		"description": "sum"
+	  }
+
+}

@@ -1,0 +1,187 @@
+{	
+	"on-scroll": {
+		"prefix": "os",
+		"body": [
+		  "animation-timeline: scroll();",
+		  ""
+		],
+		"description": "on-scroll"
+	  },
+	"on-view": {
+		"prefix": "ov",
+		"body": [
+		  "animation-timeline: view();",
+		  ""
+		],
+		"description": "on-view"
+	  },
+
+	"in-and-out": {
+		"prefix": "io",
+		"body": [
+		  "@keyframes in-and-out {",
+		  "        0%{",
+		  "            opacity: .4;",
+		  "            transform: scale(.4);",
+		  "        }",
+		  "        60%{",
+		  "            opacity: 1;",
+		  "            transform: scale(1);",
+		  "        }",
+		  "        100%{",
+		  "                opacity: .4;",
+		  "                transform: scale(.4);",
+		  "            }",
+		  "",
+		  "        }"
+		],
+		"description": "in-and-out"
+	  },
+
+
+	"full size": {
+		"prefix": "fs",
+		"body": [
+		  "width: 100;",
+		  "height: 100;"
+		],
+		"description": "full size"
+	  },
+	"grid": {
+		"prefix": "gd",
+		"body": [
+		  "display: grid;",
+		  "      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure the columns adjust dynamically */",
+		  "      grid-gap: 10px;",
+		  "      justify-content: center; /* Center the grid items horizontally */",
+		  "      align-items: center; /* Center the grid items vertically */",
+		  "      margin: 0 auto; /* Center the grid horizontally */",
+		  "      max-width: 1200px; /* Limit the maximum width of the grid */",
+		  "	  "
+		],
+		"description": "grid"
+	  },
+	"5-Row CSS Grid Layout": {
+		"scope": "css",
+		"prefix": "grid",
+		"body": [
+			".${1:grid}-container {",
+			"\tdisplay: grid;",
+			"\tgrid-template-rows: repeat(5, 1fr);",
+			"\tgrid-gap: ${2:10}px;",
+			"\t${3:// Additional grid properties here}",
+			"}",
+			"",
+			".${1:grid} {",
+			"\tgrid-row: span 1;",
+			"\t${4:// Additional item properties here}",
+			"}"
+		],
+		"description": "5-row CSS grid layout"
+	},
+	"Centered Div": {
+		"scope": "css",
+		"prefix": "center",
+		"body": [
+			
+			"\tdisplay: flex;",
+			"\tjustify-content: center;",
+			"\talign-items: center;",
+			"\theight: 100vh;",
+			"\t${1:// Additional styling for the container}"
+			
+		],
+		"description": "Centered div using flexbox"
+	},
+	
+
+	"some more stuff": {
+		"scope": "css",
+		"prefix": "tb",
+		"body": ["hello i am line two",
+		"and i am line three",
+	
+		],
+		"description": "Log output to console"
+	},
+	
+	"basic border": {
+		"scope": "css",
+		"prefix": "bb",
+		"body": ["border: ${1:1}px ${2:solid} ${3:black};"
+	
+		],
+		"description": "Log output to console"
+	},
+	"basic gradient": {
+		"scope": "css",
+		"prefix": "bg",
+		"body": ["background: linear-gradient(90deg;"
+		],
+		"description": "Log output to console"
+	},
+	"text shadow": {
+		"scope": "css",
+		"prefix": "ts",
+		"body": ["text-shadow: ${1:3}px ${1:3}px ${1:3}px $0;"
+		
+		],
+		"description": "Log output to console"
+	},
+	"box shadow": {
+		"scope": "css",
+		"prefix": "bs",
+		"body": ["box-shadow: ${1:3}px ${1:3}px ${1:3}px $0;"
+		
+		],
+		"description": "Log output to console"
+	},
+	
+	"place animation": {
+		"scope": "css",
+		"prefix": "pa",
+		"body": "animation: ${1:animation_name} 2s"
+		
+	},
+	"basic flex": {
+		"scope": "css",
+		"prefix": "bf",
+		"body": ["display: flex;",
+		"justify-content: space-evenly;"]
+		
+	},
+	
+			
+			
+		
+	"basic animation": {
+		"scope": "css",
+		"prefix": "ba",
+		"body": [
+	"@keyframes animation_name {",
+		"0%{",
+		"${1:}",
+		"}",
+		"50%{",
+		"${1:}",
+		"}",
+		"100%{",
+		"${1:}",
+		"}",
+	"}",
+	"$0"],
+		"description": "Log output to console"
+	},
+
+	"gradient text": {
+		"prefix": "gt",
+		"body": [
+		  "background: linear-gradient(90deg, orange, rgb(146, 7, 146),  pink);",
+		  "background-clip: text;",
+		  "color: transparent;"
+		],
+		"description": "gradient text"
+	  },
+	}
+	
+	

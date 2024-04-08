@@ -1,0 +1,139 @@
+{
+    "Snippet Maker": {
+        "prefix": "ms",
+        "body": [
+            "\"${1:snippet name}\": {",
+            "\t\"prefix\": \"${2:prefix}\",",
+            "\t\"body\": [",
+            "\t\t\"${3:snippet body}\"",
+            "\t],",
+            "\t\"description\": \"${4:description}\"",
+            "}"
+        ],
+        "description": "Create a snippet maker"
+    },
+   "snippet name": {
+    "prefix": "prefix",
+    "body": [
+        "snippet body"
+    ],
+    "description": "description"
+   },
+
+   
+"better comments: Todo": {
+    "prefix": "t",
+    "body": [
+        "# Todo: "
+    ],
+    "description": "a shortcut that turns t into # Todo: "
+},
+"js func": {
+    "prefix": "f",
+    "body": [
+        "function func(){"
+        ""
+        "}"
+    ],
+    "description": "a shortcut that turns f into function func(){/l}"
+},
+"anonymous 7": {
+    "prefix": "f",
+    "body": [
+        "function func(){"
+        ""
+        "}"
+    ],
+    "description": "a shortcut that turns f into function func(){/l/l}"
+},
+
+"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "cl",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "",
+    "scope": "app = Flask(__name__)",
+    "body": [
+        "from flask import Flask, render_template"
+    ],
+    "description": "a shortcut that turns  into from flask import Flask, render_template"
+},"anonymous 7": {
+    "prefix": "",
+    "scope": "app = Flask(__name__)",
+    "body": [
+        "from flask import Flask, render_template"
+    ],
+    "description": "a shortcut that turns  into from flask import Flask, render_template"
+},"anonymous 7": {
+    "prefix": "app = Flask(__name__)",
+    "scope": "app.route('/')",
+    "body": [
+        ""
+    ],
+    "description": "a shortcut that turns app = Flask(__name__) into "
+},"anonymous 7": {
+    "prefix": "fli",
+    "scope": "python",
+    "body": [
+        "from flask import Flask, render_template, request, session"
+    ],
+    "description": "a shortcut that turns fli into from flask import Flask, render_template"
+},"anonymous 7": {
+    "prefix": "fls",
+    "scope": "python",
+    "body": [
+        "from flask import Flask"
+        ""
+        "app = Flask(__name__)"
+        ""
+        "@app.route('/')"
+        "def index():"
+        "    return 'Hello, World!'"
+        ""
+        "if __name__ == '__main__':"
+        "    app.run(debug=True)"
+    ],
+    "description": "a shortcut that turns  into ['from flask import Flask', '', 'app = Flask(__name__)', '', "@app.route('/')", 'def index():', "    return 'Hello, World!'", '', "if __name__ == '__main__':", '    app.run(debug=True)']"
+},"anonymous 1": {
+    "prefix": "3l",
+    "body": [
+        "hello how are you"
+        "whats upp havent seen you in forever"
+        "and away we go"
+    ],
+    "description": "a shortcut that turns 3l into ['hello how are you', 'whats upp havent seen you in forever', 'and away we go']"
+},}
+

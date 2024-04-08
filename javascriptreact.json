@@ -1,0 +1,18 @@
+{
+    "create context manager": {
+        "prefix": "ccm",
+        "body": [
+            "const contextManger = React.CreateContextManger()"
+        ],
+        "description": "description"
+    },
+    "use context manage": {
+        "prefix": "ucm",
+        "body": [
+            "const ${1:} = React.UseContextManager(${2:})"
+        ],
+        "description": "description"
+    }
+	
+	
+}

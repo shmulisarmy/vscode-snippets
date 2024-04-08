@@ -1,0 +1,272 @@
+{
+	
+	"jquery cdn": {
+		"prefix": "jcdn",
+		"body": [
+		  "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>"
+		],
+		"description": "jquery selector"
+	  },
+	"jquery selector": {
+		"prefix": "j",
+		"body": [
+		  "$('${1:}')"
+		],
+		"description": "jquery selector"
+	  },
+	"react render": {
+		"prefix": "rr",
+		"body": [
+		  " ReactDOM.render(<App />, document.getElementById('root'));",
+		  ""
+		],
+		"description": "react render"
+	  }
+
+	"Console Log": {
+	  "scope": "javascript",
+	  "prefix": "cl",
+	  "body": [
+		"console.log(${1:message})"
+	  ],
+	  "description": "Console log"
+	},
+    "get by element": {
+        "scope": "javascript",
+        "prefix": "gbe",
+        "body": ["const ${1:element} = document.getElementById('${1:element}');"
+        ],
+    },
+	"create element": {
+        "scope": "javascript",
+        "prefix": "ce",
+        "body": ["const ${1:element} = document.createElement('${1:element}');"
+        ],
+    },
+  
+	"Function Declaration": {
+	  "scope": "javascript",
+	  "prefix": "fn",
+	  "body": [
+		"function ${1:functionName}(${2:params}) {",
+		"\t${3:// Your code here}",
+		"}"
+	  ],
+	  "description": "Function declaration"
+	},
+  
+	"Arrow Function": {
+	  "scope": "javascript",
+	  "prefix": "arw",
+	  "body": [
+		"const ${1:functionName} = (${2:params}) => {",
+		"\t${3:// Your code here}",
+		"};"
+	  ],
+	  "description": "Arrow function"
+	},
+  
+	"If Statement": {
+	  "scope": "javascript",
+	  "prefix": "if",
+	  "body": [
+		"if (${1:condition}) {",
+		"\t${2:// Your code here}",
+		"}"
+	  ],
+	  "description": "If statement"
+	},
+  
+	"For Loop": {
+	  "scope": "javascript",
+	  "prefix": "for",
+	  "body": [
+		"for (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+		"\t${3:// Your code here}",
+		"}"
+	  ],
+	  "description": "For loop"
+	},
+  
+	"While Loop": {
+	  "scope": "javascript",
+	  "prefix": "while",
+	  "body": [
+		"while (${1:condition}) {",
+		"\t${2:// Your code here}",
+		"}"
+	  ],
+	  "description": "While loop"
+	},
+  
+	"Object Literal": {
+	  "scope": "javascript",
+	  "prefix": "obj",
+	  "body": [
+		"const ${1:objectName} = {",
+		"\t${2:key1}: ${3:value1},",
+		"\t${4:key2}: ${5:value2}",
+		"};"
+	  ],
+	  "description": "Object literal"
+	},
+  
+	
+	
+		"Switch Statement": {
+		  "scope": "javascript",
+		  "prefix": "switch",
+		  "body": [
+			"switch (${1:variable}) {",
+			"\tcase ${2:value1}:",
+			"\t\t${3:// Your code here}",
+			"\t\tbreak;",
+			"\tcase ${4:value2}:",
+			"\t\t${5:// Your code here}",
+			"\t\tbreak;",
+			"\tdefault:",
+			"\t\t${6:// Your code here}",
+			"}"
+		  ],
+		  "description": "Switch statement"
+		},
+	  
+		"Try-Catch Block": {
+		  "scope": "javascript",
+		  "prefix": "trycatch",
+		  "body": [
+			"try {",
+			"\t${1:// Your code here}",
+			"} catch (error) {",
+			"\tconsole.error(error);",
+			"}"
+		  ],
+		  "description": "Try-catch block"
+		},
+	  
+		"Promise": {
+		  "scope": "javascript",
+		  "prefix": "promise",
+		  "body": [
+			"const ${1:promiseName} = new Promise((resolve, reject) => {",
+			"\t${2:// Your code here}",
+			"});"
+		  ],
+		  "description": "Promise"
+		},
+	  
+		"Event Listener": {
+		  "scope": "javascript",
+		  "prefix": "el",
+		  "body": [
+			"document.getElementById('${1:elementId}').addEventListener('${2:eventType}', (event) => {",
+			"\t${3:// Your code here}",
+			"});"
+		  ],
+		  "description": "Event listener"
+		},
+	  
+		"Fetch API": {
+		  "scope": "javascript",
+		  "prefix": "fc",
+		  "body": [
+			"fetch('${1:url}')",
+			"\t.then(response => response.json())",
+			"\t.then(data => {",
+			"\t\t${2:// Your code here}",
+			"\t})",
+			"\t.catch(error => console.error(error));"
+		  ],
+		  "description": "Fetch API"
+		},
+
+
+
+
+		"return": {
+			"prefix": "re",
+			"body": [
+			  "return (",
+			  "    <div>",
+			  "     	${1:} ",
+			  "    </div>",
+			  "        )"
+			],
+			"description": "return"
+		  },
+
+		  "set state": {
+			"prefix": "ss",
+			"body": [
+			  "const [${1:state}, set${1:State}] = React.useState('')",
+			  ""
+			],
+			"description": "set state"
+		  },
+
+		  "change state": {
+			"prefix": "cs",
+			"body": [
+			  "setState({...state, })"
+			],
+			"description": "change state"
+		  },
+
+
+		  "react map": {
+			"prefix": "rm",
+			"body": [
+			  "{${1:item}s.map(${1:item} => <${1:Item} {...${1:item}}/>)}",
+			  ""
+			],
+			"description": "react map"
+		  },
+
+		  "react component": {
+			"prefix": "rc",
+			"body": [
+			  "function component(props) {",
+			  "    const [state, setstate] = React.useState(props)",
+			  "    const {} = state;",
+			  "",
+			  "    React.useEffect(() => {",
+			  "",
+			  "    }, [])",
+			  "",
+			  "    return (",
+			  "        <div>",
+			  "            ",
+			  "        </div>",
+			  "          )}"
+			],
+			"description": "react component"
+		  },
+
+
+	  "snippet name": {
+		"prefix": "prefix",
+		"body": [
+			"snippet body"
+		],
+		"description": "description"
+	  },
+	  
+
+
+
+	  "create context manager": {
+        "prefix": "ccm",
+        "body": [
+            "const contextManger = React.CreateContextManger()"
+        ],
+        "description": "description"
+    },
+    "use context manage": {
+        "prefix": "ucm",
+        "body": [
+            "const ${1:} = React.UseContextManager(${2:})"
+        ],
+        "description": "description"
+    }
+  }
+  

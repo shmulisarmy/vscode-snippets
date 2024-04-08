@@ -1,0 +1,9 @@
+{
+	"next task": {
+		"prefix": "nt",
+		"body": [
+			"next task"
+		],
+		"description": "nt -> next task"
+	}
+}

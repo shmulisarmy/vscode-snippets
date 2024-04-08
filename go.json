@@ -1,0 +1,17 @@
+{
+
+"shortcut": {
+    "prefix": "cl",
+    "scope": "js",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns cl into console.log()"
+},"anonymous 7": {
+    "prefix": "function do(){/l}",
+    "body": [
+        "console.log()"
+    ],
+    "description": "a shortcut that turns function do(){/l} into console.log()"
+},}
+	  

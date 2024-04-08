@@ -1,0 +1,25 @@
+{
+	"new file": {
+		"prefix": "nf",
+		"body": [
+		  "|command|action|",
+		  "|---|---|",
+		  "|${1:up arrow}||",
+		  "",
+		  "```sh",
+		  "${1:python3 }",
+		  "```"
+		],
+		"description": "new file"
+	  },
+	  "requirements": {
+		"prefix": "re",
+		"body": [
+			"after running git clone ... run: "
+			"```sh",
+			"pip install -r requirements.txt",
+			"```"
+		],
+		"description": "requirements.txt info"
+	}
+}
